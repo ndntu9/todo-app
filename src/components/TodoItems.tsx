@@ -19,13 +19,11 @@ function TodoItems({ todoList, setTodoCompleted, removeTodo }: TodoItemsProps) {
                             type="checkbox"
                             className="peer hidden"
                             checked={item.completed}
-                        />
-                        <span
-                            className="relative inline-block size-[26px] border border-solid border-[#6C63FF] rounded-[2px] peer-checked:bg-[#6C63FF] text-[#F7F7F7] dark:text-[#252525] dark:peer-checked:text-[#F7F7F7] cursor-pointer"
-                            onClick={() => {
+                            onChange={() => {
                                 setTodoCompleted(index);
                             }}
-                        >
+                        />
+                        <span className="relative inline-block size-[26px] border border-solid border-[#6C63FF] rounded-[2px] peer-checked:bg-[#6C63FF] text-[#F7F7F7] dark:text-[#252525] dark:peer-checked:text-[#F7F7F7] cursor-pointer">
                             <i className="fa-solid fa-check absolute top-[50%] left-[50%] transform-[translate(-50%,-50%)]"></i>
                         </span>
                     </label>
